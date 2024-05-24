@@ -22,5 +22,3 @@
 		 (mkdir-p gitcore)
 	         (copy-file "contrib/completion/git-prompt.sh"
 			    (string-append gitcore "/git-prompt.sh")))))))))))
-
-thaenz-git
