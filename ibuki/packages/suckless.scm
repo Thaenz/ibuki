@@ -5,8 +5,10 @@
   #:use-module (guix utils)
   #:use-module (guix gexp)
 
-  #:export (thaenz-st)
-  #:export (thaenz-dwm))
+  #:use-module (ibuki patches suckless)
+
+  #:export (thaenz-st
+	    thaenz-dwm))
 
 (define-public thaenz-st
   (package
@@ -20,7 +22,7 @@
 			    version ".tar.gz"))
        (sha256
         (base32 "0js9z5kn8hmpxzfmb2g6zsy28zkpg88j3wih5wixc89b8x7ms8bb"))
-       (patches (list (local-file "patches/st-gruvbox-dark-0.8.5.diff")))))))
+       (patches (list st-gruvbox-dark))))))
 
 (define-public thaenz-dwm
   (package
