@@ -8,14 +8,14 @@
 (define-public thaenz-hosts
   (package
     (name "thaenz-hosts")
-    (version "05-05-2024")
+    (version "26-05-2024")
     (source (origin
       (method url-fetch)
       (uri (string-append
 	"https://github.com/Thaenz/hosts/releases/download/v" version
 	"/hosts.gz"))
       (sha256
-	(base32 "1q44k5vydk908ll3j0bg5x5lsksgndyygn9la7fk24ird3agnynx"))))
+	(base32 "1yz62q1z23xprbyj3jbj8ygbjq5na9qfzhdvs37ix7xvl21bqg4r"))))
     (build-system copy-build-system)
     (home-page "https://github.com/Thaenz/hosts")
     (synopsis "My massive hosts list")
