@@ -2,11 +2,9 @@
   #:use-module (gnu home services shepherd)
   #:use-module (gnu services shepherd)
   #:use-module (gnu packages bittorrent)
-  #:use-module (guix gexp)
+  #:use-module (guix gexp))
 
-  #:export (transmission-shepherd-service))
-
-(define transmission-shepherd-service
+(define-public transmission-shepherd-service
   (shepherd-service
     (provision (list 'transmission))
     (documentation "run `transmission-daemon'")

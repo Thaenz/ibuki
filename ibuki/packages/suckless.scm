@@ -5,10 +5,7 @@
   #:use-module (guix utils)
   #:use-module (guix gexp)
 
-  #:use-module (ibuki patches suckless)
-
-  #:export (thaenz-st
-	    thaenz-dwm))
+  #:use-module (ibuki patches suckless))
 
 (define-public thaenz-st
   (package

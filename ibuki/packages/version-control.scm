@@ -2,9 +2,7 @@
   #:use-module (gnu packages version-control)
   #:use-module (guix packages)
   #:use-module (guix utils)
-  #:use-module (guix gexp)
-
-  #:export (thaenz-git))
+  #:use-module (guix gexp))
 
 (define-public thaenz-git
   (package
