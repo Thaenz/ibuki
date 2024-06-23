@@ -37,10 +37,10 @@
 prompt.")
       (license license:gpl2)))
 
-(define-public thaenz-git
+(define-public git-ibuki
   (package
   (inherit git)
-  (name "thaenz-git")
+  (name "git-ibuki")
   (synopsis "add missing git-prompt.sh from base git package")
   (arguments
     (substitute-keyword-arguments (package-arguments git)

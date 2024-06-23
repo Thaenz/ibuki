@@ -7,10 +7,10 @@
 
   #:use-module (ibuki patches suckless))
 
-(define-public thaenz-st
+(define-public st-ibuki
   (package
     (inherit st)
-    (name "thaenz-st")
+    (name "st-ibuki")
     (version "0.9.2")
     (source
       (origin
@@ -21,10 +21,10 @@
         (base32 "0js9z5kn8hmpxzfmb2g6zsy28zkpg88j3wih5wixc89b8x7ms8bb"))
        (patches (list st-gruvbox-dark))))))
 
-(define-public thaenz-dwm
+(define-public dwm-ibuki
   (package
     (inherit dwm)
-    (name "thaenz-dwm")
+    (name "dwm-ibuki")
     (version "6.5")
     (source (origin
 	      (method url-fetch)
