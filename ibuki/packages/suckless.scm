@@ -42,15 +42,3 @@
 			      (("#000000") "#282828") (("#00ffff") "#98971a")))
        (patches (list dmenu-center
 		      dmenu-border))))))
-
-(define-public dwm-ibuki
-  (package
-    (inherit dwm)
-    (name "dwm-ibuki")
-    (version "6.5")
-    (source (origin
-	      (method url-fetch)
-	      (uri (string-append "https://dl.suckless.org/dwm/dwm-"
-				  version ".tar.gz"))
-	      (sha256
-		(base32 "0acpl05rg6rg6nrg3rv4kp388iqzp1n6dhin30a97yzjm6zrxmr1"))))))
