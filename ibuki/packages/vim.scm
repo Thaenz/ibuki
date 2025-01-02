@@ -28,3 +28,28 @@
 	"A port of gruvbox community theme to lua with treesitter and semantic
 highlights support!")
       (license license:expat))))
+
+(define-public neovim-surround-ibuki
+  (let ((commit "9f0cb495f25bff32c936062d85046fbda0c43517")
+	(revision "0"))
+    (package
+      (name "neovim-surround-ibuki")
+      (version (git-version "2.3.1" revision commit))
+      (source (origin
+		(method git-fetch)
+                (uri (git-reference
+		       (url "https://github.com/kylechui/nvim-surround")
+		       (commit commit)))
+                (file-name (git-file-name name version))
+                (sha256
+		  (base32
+		    "1c78320liqhza52gq2xylykd9m6rl50cn44flldg43a4l7rrabxh"))))
+      (build-system vim-build-system)
+      (arguments
+	(list #:plugin-name "nvim-surround"
+	      #:mode "opt"))
+      (home-page "https://github.com/kylechui/nvim-surround")
+      (synopsis "Lua rewrite of tpope/vim-surround vim plugin.")
+      (description "Neovim plugin to Add/change/delete surrounding
+delimiter pairs with ease.")
+      (license license:expat))))
