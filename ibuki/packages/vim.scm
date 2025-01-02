@@ -53,3 +53,29 @@ highlights support!")
       (description "Neovim plugin to Add/change/delete surrounding
 delimiter pairs with ease.")
       (license license:expat))))
+
+(define-public neovim-lualine-ibuki
+  (let ((commit "2a5bae925481f999263d6f5ed8361baef8df4f83")
+	(revision "0"))
+    (package
+      (name "neovim-lualine-ibuki")
+      (version (git-version "0.0.0" revision commit))
+      (source (origin
+		(method git-fetch)
+                (uri (git-reference
+		       (url "https://github.com/nvim-lualine/lualine.nvim")
+		       (commit commit)))
+                (file-name (git-file-name name version))
+                (sha256
+		  (base32
+		    "0hp8gycbwm6ibq4rpa18j3g9xacgghklz4c8jlr4gif6g37r1pi0"))))
+      (build-system vim-build-system)
+      (arguments
+	(list #:plugin-name "lualine.nvim"
+	      #:mode "opt"))
+      (home-page "https://github.com/nvim-lualine/lualine.nvim")
+      (synopsis "Neovim plugin for improved statusline.")
+      (description
+	"A blazing fast and easy to configure neovim statusline plugin written
+in pure lua.")
+      (license license:expat))))
